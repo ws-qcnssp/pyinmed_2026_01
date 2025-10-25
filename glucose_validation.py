@@ -11,3 +11,15 @@ wprowadzona_liczba = float(wprowadzona_liczba)
 
 # mg/dl -> 70-100 
 # mmol/l -> 3.9 - 5.6
+# wartość przyjmijmy jako 40
+
+granica = 40.0
+
+if wprowadzona_liczba < granica:
+    jednostka = 'mmol/l'
+    dolna_granica = 3.9
+    gorna_granica = 5.6
+else:
+    jednostka = 'mg/dl'
+    dolna_granica = 70
+    gorna_granica = 100
