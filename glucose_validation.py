@@ -5,4 +5,5 @@ Skrypt do walidacji stężenia glukozy we krwi
 3. weryfikujemy, czy poziom stężenia gl. jest prawidłowy
 '''
 
-
+wprowadzona_liczba = input('Wprowadź stężenie glukozy: ')
+wprowadzona_liczba = float(wprowadzona_liczba)
