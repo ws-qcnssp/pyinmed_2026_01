@@ -32,3 +32,4 @@ elif wprowadzona_liczba < dolna_granica:
     print(f'{wprowadzona_liczba} {jednostka} -> poniżej normy!')
 else:
     print(f'{wprowadzona_liczba} {jednostka} -> powyżej normy!')
+
