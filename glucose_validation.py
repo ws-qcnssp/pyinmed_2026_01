@@ -6,7 +6,11 @@ Skrypt do walidacji stężenia glukozy we krwi
 '''
 
 wprowadzona_liczba = input('Wprowadź stężenie glukozy: ')
-wprowadzona_liczba = float(wprowadzona_liczba)
+try:
+    wprowadzona_liczba = float(wprowadzona_liczba)
+except ValueError as e:
+    print('Podana wartość nie jest liczbą, podaj wartość ułamkową z kropką, nie przecinkiem!')
+    exit()
 # wprowadzona_liczba = float(input('Wprowadź stężenie glukozy: ')) --> jednolinijkowo
 
 # mg/dl -> 70-100 
