@@ -7,4 +7,4 @@ Skrypt do walidacji stężenia glukozy we krwi
 
 wprowadzona_liczba = input('Wprowadź stężenie glukozy: ')
 wprowadzona_liczba = float(wprowadzona_liczba)
-# wprowadzona_liczba = float(input('Wprowadź stężenie glukozy: '))
+# wprowadzona_liczba = float(input('Wprowadź stężenie glukozy: ')) --> jednolinijkowo
