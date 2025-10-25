@@ -26,8 +26,8 @@ else:
 
 if dolna_granica <= wprowadzona_liczba <= gorna_granica:
     print(f'{wprowadzona_liczba} {jednostka} -> w normie!')
-    print('{licz} {jedn} -> w normie!'.format(licz=wprowadzona_liczba, jedn=jednostka))
-    print(wprowadzona_liczba, jednostka, '-> w normie!')
+    # print('{licz} {jedn} -> w normie!'.format(licz=wprowadzona_liczba, jedn=jednostka))
+    # print(wprowadzona_liczba, jednostka, '-> w normie!')
 elif wprowadzona_liczba < dolna_granica:
     print(f'{wprowadzona_liczba} {jednostka} -> poniżej normy!')
 else:
