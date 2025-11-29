@@ -12,3 +12,7 @@ dff = dff.query('Indicator == "Life expectancy at birth (years)" & Location == "
 dff_m = dff.query('Dim1 == "Male"')
 dff_k = dff.query('Dim1 == "Female"')
 
+plt.scatter(dff_m['Period'], dff_m['FactValueNumeric'], color='blue', label='mężczyźni')
+plt.scatter(dff_k['Period'], dff_k['FactValueNumeric'], color='red', label='kobiety')
+
+plt.show()
