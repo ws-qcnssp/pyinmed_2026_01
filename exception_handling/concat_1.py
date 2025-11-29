@@ -3,7 +3,7 @@ def concatenate_strings(a, b):
 
 string1 = "Hello, "
 string2 = "world!"
-string3 = 42
+string3 = "42"
 
 result1 = concatenate_strings(string1, string2)
 print(result1)
