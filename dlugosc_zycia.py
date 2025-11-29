@@ -17,4 +17,4 @@ plt.scatter(dff_k['Period'], dff_k['FactValueNumeric'], color='red', label='kobi
 plt.legend()
 
 # plt.savefig('wykres.png')
-plt.show()
+# plt.show()
