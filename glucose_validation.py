@@ -15,7 +15,7 @@ except ValueError as e:
 
 # mg/dl -> 70-100 
 # mmol/l -> 3.9 - 5.6
-# wartość przyjmijmy jako 40
+# wartość przyjmijmy jako 40 
 
 granica = 40.0
 
