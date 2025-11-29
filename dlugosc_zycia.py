@@ -21,7 +21,7 @@ plt.scatter(dff_k['Period'], dff_k['FactValueNumeric'], color='red', label='kobi
 
 # f(x) = a*x^2 + b*x + c
 plt.plot(dff_m['Period'], a_m * dff_m['Period'] ** 2 + b_m * dff_m['Period'] + c_m, color='blue', label='trend - M')
-plt.plot(dff_k['Period'], a_k * dff_k['Period'] ** 2 + b_k * dff_k['Period'] + c_k, color='red', label='trend - k')
+plt.plot(dff_k['Period'], a_k * dff_k['Period'] ** 2 + b_k * dff_k['Period'] + c_k, color='red', label='trend - K')
 
 plt.legend()
 
