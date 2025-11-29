@@ -51,4 +51,5 @@ def main():
     jedn, poz = analiza_wyniku(liczba)
     print(f'{liczba} {jedn} - {poz}')
 
-
+if __name__ == '__main__':
+    main()
