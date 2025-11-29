@@ -43,10 +43,12 @@ def analiza_wyniku(wprowadzona_liczba):
         poziom = 'powyżej normy!'
     return jednostka, poziom
 
+def main():
+    liczba = wprowadzenie_wartosci()
+    if liczba is None:
+        print('Koniec skryptu.')
+        exit()
+    jedn, poz = analiza_wyniku(liczba)
+    print(f'{liczba} {jedn} - {poz}')
 
-liczba = wprowadzenie_wartosci()
-if liczba is None:
-    print('Koniec skryptu.')
-    exit()
-jedn, poz = analiza_wyniku(liczba)
-print(f'{liczba} {jedn} - {poz}')
+
