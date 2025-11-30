@@ -29,6 +29,10 @@ def test_login(page):
         print('Wylogowano!')
 
 
+def test_wybor(page):
+    page.goto(URL)
+    page.locator("a[href*=dropdown]").click()
+
 def main():
     with sync_playwright() as pw:
         browser = start_pw(pw)
