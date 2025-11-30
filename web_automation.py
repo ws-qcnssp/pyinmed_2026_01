@@ -39,6 +39,8 @@ def test_wybor(page):
         print('oczekiwana opcja nie jest wybrana')
 
 def test_sciaganie(page):
+    if os.path.exists('test.txt'):
+        os.remove('test.txt')
     page.goto(URL+'/download')
     with page.expect_download() as download_info:
         page.locator("a[href*=txt]").nth(0).click()
