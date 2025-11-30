@@ -32,6 +32,7 @@ def test_login(page):
 def test_wybor(page):
     page.goto(URL)
     page.locator("a[href*=dropdown]").click()
+    page.locator("select[id=dropdown]").select_option("Option 2")
 
 def main():
     with sync_playwright() as pw:
