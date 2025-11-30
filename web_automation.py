@@ -1,4 +1,5 @@
 from playwright.sync_api import sync_playwright
+from time import sleep
 
 URL = 'https://the-internet.herokuapp.com'
 
@@ -13,3 +14,7 @@ def stop_pw(browser):
     if browser:
         browser.close()
 
+
+def main():
+    with sync_playwright() as pw:
+        browser = start_pw(pw)
