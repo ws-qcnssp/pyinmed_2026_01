@@ -42,7 +42,8 @@ def main():
     with sync_playwright() as pw:
         browser = start_pw(pw)
         page = browser.new_page()
-        test_login(page)
+        # test_login(page)
+        test_wybor(page)
         sleep(5)
         stop_pw(browser)
 
