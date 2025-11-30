@@ -28,7 +28,6 @@ def test_login(page):
     if "You logged out of the secure area!" in alert.inner_text():
         print('Wylogowano!')
 
-
 def test_wybor(page):
     page.goto(URL)
     page.locator("a[href*=dropdown]").click()
@@ -37,6 +36,11 @@ def test_wybor(page):
         print('Wybrano prawidłową opcję')
     else:
         print('oczekiwana opcja nie jest wybrana')
+
+def test_sciaganie(page):
+    page.goto(URL+'/download')
+    with page.expect_download() as download_info:
+        page.locator("a[href*=txt]")
 
 def main():
     with sync_playwright() as pw:
