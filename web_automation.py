@@ -19,6 +19,7 @@ def test_login(page):
     page.locator("a[href*=login]").click()
     page.locator("input[id=username]").fill('tomsmith')
     page.locator("input[id=password]").fill('SuperSecretPassword!')
+    page.locator("button[type=submit]").click()
 
 
 def main():
