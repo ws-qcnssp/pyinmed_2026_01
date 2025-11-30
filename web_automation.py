@@ -17,6 +17,7 @@ def stop_pw(browser):
 def test_login(page):
     page.goto(URL)
     page.locator("a[href*=login]").click()
+    page.locator("input[id=username]")
 
 def main():
     with sync_playwright() as pw:
