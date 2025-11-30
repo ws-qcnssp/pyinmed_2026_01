@@ -14,6 +14,10 @@ def stop_pw(browser):
     if browser:
         browser.close()
 
+def test_login(page):
+    page.goto(URL)
+    page.locator("a[href*=login]").click()
+
 def main():
     with sync_playwright() as pw:
         browser = start_pw(pw)
