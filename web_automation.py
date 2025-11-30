@@ -12,3 +12,4 @@ def start_pw(pw):
 def stop_pw(browser):
     if browser:
         browser.close()
+
