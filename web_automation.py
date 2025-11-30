@@ -18,3 +18,7 @@ def stop_pw(browser):
 def main():
     with sync_playwright() as pw:
         browser = start_pw(pw)
+        sleep(5)
+        stop_pw(browser)
+
+
