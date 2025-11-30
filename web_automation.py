@@ -20,6 +20,13 @@ def test_login(page):
     page.locator("input[id=username]").fill('tomsmith')
     page.locator("input[id=password]").fill('SuperSecretPassword!')
     page.locator("button[type=submit]").click()
+    alert = page.locator("div[id=flash]")
+    alert.wait_for(state="visible")
+    if "You logged into a secure area!" in alert.inner_text():
+        print('Zalogowano!')
+    page.locator("a[href*=logout]").click()
+    if "You logged out of the secure area!" in alert.inner_text():
+        print('Wylogowano!')
 
 
 def main():
