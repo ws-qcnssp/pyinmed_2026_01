@@ -14,11 +14,11 @@ def stop_pw(browser):
     if browser:
         browser.close()
 
-
 def main():
     with sync_playwright() as pw:
         browser = start_pw(pw)
         sleep(5)
         stop_pw(browser)
 
-
+if __name__ == '__main__':
+    main()
