@@ -1,5 +1,6 @@
 from playwright.sync_api import sync_playwright
 from time import sleep
+import os
 
 URL = 'https://the-internet.herokuapp.com'
 
@@ -40,7 +41,13 @@ def test_wybor(page):
 def test_sciaganie(page):
     page.goto(URL+'/download')
     with page.expect_download() as download_info:
-        page.locator("a[href*=txt]")
+        page.locator("a[href*=txt]").nth(0).click()
+        download = download_info.value
+        download.save_as('test.txt')
+    if os.path.exists('test.txt'):
+        print('Pobrano prawidłowo')
+    else:
+        print('Plik nie został znaleziony!')
 
 def main():
     with sync_playwright() as pw:
