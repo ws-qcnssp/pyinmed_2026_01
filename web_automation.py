@@ -54,7 +54,8 @@ def main():
         browser = start_pw(pw)
         page = browser.new_page()
         # test_login(page)
-        test_wybor(page)
+        # test_wybor(page)
+        test_sciaganie(page)
         sleep(5)
         stop_pw(browser)
 
