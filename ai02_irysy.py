@@ -32,5 +32,5 @@ print('Model został nauczony')
 wyniki_przewidywane = model.predict(cechy_test)
 print('Wykonano predykcję dla zbioru testowego')
 
-print()
+
 
