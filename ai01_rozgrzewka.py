@@ -10,6 +10,7 @@ slownik = {
 
 # 3. Utwórz DataFrame z powyższego słownika
 df = pd.DataFrame(slownik)
+print(df)
 
 # 4. Wyświetl informacje o DataFrame za pomocą metody "info", "describe" oraz pierwsze 3 wiersze za pomocą metody "head"
 
