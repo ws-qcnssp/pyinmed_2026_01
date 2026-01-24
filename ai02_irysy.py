@@ -12,3 +12,5 @@ wyniki = dane_iris.target
 print(f'Kształt cechy: {cechy.shape}')
 print(f'Kształt wyniki: {wyniki.shape}')
 
+
+
