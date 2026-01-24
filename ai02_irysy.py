@@ -51,5 +51,7 @@ tree.plot_tree(
     feature_names=dane_iris.feature_names,
     class_names=dane_iris.target_names
 )
+plt.title('Drzewo decyzyjne - irysy')
+plt.show()
 
 
