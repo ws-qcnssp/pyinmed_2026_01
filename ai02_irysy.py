@@ -18,5 +18,5 @@ print(wyniki)
 from sklearn.model_selection import train_test_split
 cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(cechy, wyniki, test_size=0.3, random_state=100)
 
-
+print(wyniki_test)
 
