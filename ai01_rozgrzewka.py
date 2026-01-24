@@ -30,5 +30,5 @@ starsze_niz_30 = df[df['Wiek'] > 30]
 print(starsze_niz_30)
 
 # 7. Zapisz DataFrame do pliku CSV o nazwie 'dane_osobowe.csv' bez indeksów
-df.to_csv('dane_osobowe.csv')
+df.to_csv('dane_osobowe.csv', index=False)
 
