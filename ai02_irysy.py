@@ -33,9 +33,12 @@ wyniki_przewidywane = model.predict(cechy_test)
 print('Wykonano predykcję dla zbioru testowego')
 
 # 7. Weryfikacja dokładności modelu
-print(f'Wyniki - prawdziwe:\n{wyniki_test}')
-print(f'Wyniki - przewidywane:\n{wyniki_przewidywane}')
+# print(f'Wyniki - prawdziwe:\n{wyniki_test}')
+# print(f'Wyniki - przewidywane:\n{wyniki_przewidywane}')
 
-print(sum(wyniki_przewidywane == wyniki_test))
-print(len(wyniki_test))
+# print(sum(wyniki_przewidywane == wyniki_test))
+# print(len(wyniki_test))
+from sklearn.metrics import accuracy_score
+dokladnosc = accuracy_score(wyniki_test, wyniki_przewidywane)
+
 
