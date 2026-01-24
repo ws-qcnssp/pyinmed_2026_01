@@ -42,6 +42,14 @@ from sklearn.metrics import accuracy_score
 dokladnosc = accuracy_score(wyniki_test, wyniki_przewidywane)
 print(f'Dokładność (accuracy): {dokladnosc}')
 
-
+# 8. (dodatkowo) Struktura drzewa decyzyjnego
+import matplotlib.pyplot as plt
+plt.figure(figsize=(12,8))
+tree.plot_tree(
+    model,
+    filled=True,
+    feature_names=dane_iris.feature_names,
+    class_names=dane_iris.target_names
+)
 
 
