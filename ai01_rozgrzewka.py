@@ -23,6 +23,7 @@ print(df.head())
 
 # 5. Dodaj nową kolumnę 'Kraj' z wartością 'Polska' dla wszystkich wierszy
 df['Kraj'] = 'Polska'
+print(df)
 
 # 6. Filtruj DataFrame, aby wyświetlić tylko osoby starsze niż 30 lat
 
