@@ -28,3 +28,5 @@ model = tree.DecisionTreeClassifier()
 model.fit(cechy_trening, wyniki_trening)
 print('Model został nauczony')
 
+# 6. 
+
