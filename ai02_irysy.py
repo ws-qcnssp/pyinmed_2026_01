@@ -4,4 +4,4 @@ dane_iris = load_iris()
 
 # 2. Analiza danych
 print(f'Cechy w zbiorze: {dane_iris.feature_names}')
-print(f'Cechy w zbiorze: {dane_iris.target_names}')
+print(f'Kategorie w zbiorze: {dane_iris.target_names}')
