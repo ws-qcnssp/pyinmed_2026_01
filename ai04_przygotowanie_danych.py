@@ -1,5 +1,8 @@
 # 1. Przygotowanie danych do analizy medycznej
 import pandas as pd
+from sklearn.model_selection import train_test_split
+from sklearn import tree
+from sklearn.metrics import accuracy_score
 
 dane = {
     'Wiek': [45, 62, 33, 70, 55, 48, 60, 39, 75, 29],
@@ -12,3 +15,8 @@ dane = {
 df = pd.DataFrame(dane)
 print(df.info())
 print(df.head())
+
+cechy = df[['Wiek', 'CRP', 'Plec', 'Palenie']]
+wyniki = df['Wynik']
+model = tree.DecisionTreeClassifier()
+
