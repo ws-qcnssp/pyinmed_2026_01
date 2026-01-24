@@ -20,3 +20,9 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(cechy,
 
 print(wyniki_test)
 
+# 4. Budowa modelu do klasyfikacji
+from sklearn import tree
+model = tree.DecisionTreeClassifier()
+
+
+
