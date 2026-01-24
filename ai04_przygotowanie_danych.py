@@ -9,3 +9,6 @@ dane = {
     'Wynik': [1, 1, 0, 1, 0, 1, 1, 0, 1, 0] # 1 = Podwyższone ryzyko, 0 = Niskie ryzyko
 }
 
+df = pd.DataFrame(dane)
+print(df.info())
+print(df.head())
