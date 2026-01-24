@@ -9,5 +9,6 @@ print(f'Kategorie w zbiorze: {dane_iris.target_names}')
 cechy = dane_iris.data
 wyniki = dane_iris.target
 
-
+print(f'Kształt cechy: {cechy.shape}')
+print(f'Kształt wyniki: {wyniki.shape}')
 
