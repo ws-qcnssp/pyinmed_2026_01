@@ -32,5 +32,7 @@ print('Model został nauczony')
 wyniki_przewidywane = model.predict(cechy_test)
 print('Wykonano predykcję dla zbioru testowego')
 
-
+# 7. Weryfikacja dokładności modelu
+print(f'Wyniki - prawdziwe:\n{wyniki_test}')
+print(f'Wyniki - przewidywane:\n{wyniki_przewidywane}')
 
