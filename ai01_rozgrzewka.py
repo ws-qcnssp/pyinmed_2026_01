@@ -14,7 +14,12 @@ df = pd.DataFrame(slownik)
 print(df)
 
 # 4. Wyświetl informacje o DataFrame za pomocą metody "info", "describe" oraz pierwsze 3 wiersze za pomocą metody "head"
-
+print('Metoda info:')
+print(df.info())
+print('Metoda describe:')
+print(df.describe())
+print('Metoda head:')
+print(df.head())
 
 # 5. Dodaj nową kolumnę 'Kraj' z wartością 'Polska' dla wszystkich wierszy
 
