@@ -28,5 +28,7 @@ model = tree.DecisionTreeClassifier()
 model.fit(cechy_trening, wyniki_trening)
 print('Model został nauczony')
 
-# 6. 
+# 6. Wykonanie predykcji na zbiorze testowym - metoda "predict"
+wyniki_przewidywane = model.predict(cechy_test)
+print('Wykonano predykcję dla zbioru testowego')
 
