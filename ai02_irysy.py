@@ -9,3 +9,5 @@ print(f'Kategorie w zbiorze: {dane_iris.target_names}')
 cechy = dane_iris.data
 wyniki = dane_iris.target
 
+
+
