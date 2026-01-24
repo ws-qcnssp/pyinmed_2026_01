@@ -26,7 +26,8 @@ df['Kraj'] = 'Polska'
 print(df)
 
 # 6. Filtruj DataFrame, aby wyświetlić tylko osoby starsze niż 30 lat
-
+starsze_niz_30 = df[df['Wiek'] > 30]
+print(starsze_niz_30)
 
 # 7. Zapisz DataFrame do pliku CSV o nazwie 'dane_osobowe.csv' bez indeksów
 
