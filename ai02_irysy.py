@@ -6,4 +6,5 @@ dane_ramka = load_iris(as_frame=True)
 # 2. Analiza danych
 print(f'Cechy w zbiorze: {dane_iris.feature_names}')
 print(f'Kategorie w zbiorze: {dane_iris.target_names}')
-
+cechy = dane_iris.data
+wyniki = dane_iris.target
