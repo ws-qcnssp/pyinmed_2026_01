@@ -23,10 +23,10 @@ wyniki = df['Wynik']
 # cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
 #     cechy, wyniki, test_size=0.4, random_state=100
 # )
-# model = tree.DecisionTreeClassifier()
 # model.fit(cechy_trening, wyniki_trening)
 
 cechy['Plec_K'] = cechy['Plec'] == 'K'
 print(cechy.head())
 
+model = tree.DecisionTreeClassifier()
 
