@@ -24,5 +24,6 @@ print(wyniki_test)
 from sklearn import tree
 model = tree.DecisionTreeClassifier()
 
-
+# 5. Uczenie modelu na danych treningowych - metoda "fit"
+model.fit(cechy_trening, wyniki_trening)
 
