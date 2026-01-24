@@ -40,5 +40,8 @@ print('Wykonano predykcję dla zbioru testowego')
 # print(len(wyniki_test))
 from sklearn.metrics import accuracy_score
 dokladnosc = accuracy_score(wyniki_test, wyniki_przewidywane)
+print(f'Dokładność (accuracy): {dokladnosc}')
+
+
 
 
