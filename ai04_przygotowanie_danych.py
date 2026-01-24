@@ -26,7 +26,7 @@ wyniki = df['Wynik']
 # model = tree.DecisionTreeClassifier()
 # model.fit(cechy_trening, wyniki_trening)
 
-dane['Plec_K'] = dane['Plec'] == 'K'
+cechy['Plec_K'] = cechy['Plec'] == 'K'
 print(df.head())
 
 
