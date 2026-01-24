@@ -12,6 +12,8 @@ wyniki = dane_iris.target
 print(f'Kształt cechy: {cechy.shape}')
 print(f'Kształt wyniki: {wyniki.shape}')
 
+print(wyniki)
+
 # 3. Podział danych na zbiory treningowy i testowy - 70% danych -> trening, 30% -> test
-from 
+# from 
 
