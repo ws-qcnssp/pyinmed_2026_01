@@ -26,4 +26,5 @@ model = tree.DecisionTreeClassifier()
 
 # 5. Uczenie modelu na danych treningowych - metoda "fit"
 model.fit(cechy_trening, wyniki_trening)
+print('Model został nauczony')
 
