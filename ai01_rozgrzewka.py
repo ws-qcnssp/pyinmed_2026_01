@@ -19,7 +19,7 @@ print(df.info())
 print('Metoda describe:')
 print(df.describe())
 print('Metoda head:')
-print(df.head())
+print(df.head(3))
 
 # 5. Dodaj nową kolumnę 'Kraj' z wartością 'Polska' dla wszystkich wierszy
 df['Kraj'] = 'Polska'
