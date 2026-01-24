@@ -10,7 +10,7 @@ from sklearn.metrics import accuracy_score
 
 dane = datasets.load_breast_cancer()
 cechy = dane.data
-wyniki = dane.trget
+wyniki = dane.target
 
 # Podział na trening/test
 cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
