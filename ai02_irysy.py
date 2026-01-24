@@ -15,5 +15,8 @@ print(f'Kształt wyniki: {wyniki.shape}')
 print(wyniki)
 
 # 3. Podział danych na zbiory treningowy i testowy - 70% danych -> trening, 30% -> test
-# from 
+from sklearn.model_selection import train_test_split
+cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(cechy, wyniki, test_size=0.3, random_state=100)
+
+
 
