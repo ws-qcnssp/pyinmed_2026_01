@@ -5,5 +5,5 @@ pandas
 pydicom
 selenium
 flask
-sckikit-learn
+scikit-learn
 seaborn
