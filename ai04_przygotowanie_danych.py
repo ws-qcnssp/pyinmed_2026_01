@@ -27,6 +27,6 @@ wyniki = df['Wynik']
 # model.fit(cechy_trening, wyniki_trening)
 
 cechy['Plec_K'] = cechy['Plec'] == 'K'
-print(df.head())
+print(cechy.head())
 
 
