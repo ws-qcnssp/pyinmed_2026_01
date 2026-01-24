@@ -1,8 +1,8 @@
 # 1. Zaimportuj bibliotekę Pandas jako pd
-
+import pandas as pd
 
 # 2. Utwórz słownik danych z trzema kluczami: 'Imię', 'Wiek', 'Miasto' i odpowiednimi listami wartości - po 5 elementów każda
-
+slownik =
 
 # 3. Utwórz DataFrame z powyższego słownika
 
