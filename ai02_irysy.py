@@ -36,6 +36,6 @@ print('Wykonano predykcję dla zbioru testowego')
 print(f'Wyniki - prawdziwe:\n{wyniki_test}')
 print(f'Wyniki - przewidywane:\n{wyniki_przewidywane}')
 
-sum(wyniki_przewidywane == wyniki_test)
-len(wyniki_test)
+print(sum(wyniki_przewidywane == wyniki_test))
+print(len(wyniki_test))
 
