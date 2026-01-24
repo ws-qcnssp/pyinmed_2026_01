@@ -7,6 +7,7 @@ slownik = {
     'Wiek': [23, 45, 53, 28, 13],
     'Miasto': ['Kraków', 'Warszawa', 'Poznań', 'Wrocław', 'Kraków']
 }
+print(slownik)
 
 # 3. Utwórz DataFrame z powyższego słownika
 df = pd.DataFrame(slownik)
