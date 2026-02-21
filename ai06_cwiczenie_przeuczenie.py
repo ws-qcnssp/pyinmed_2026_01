@@ -25,7 +25,7 @@ for depth in range(1,11):
     trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
     test_dokladnosc = model.score(cechy_test, wyniki_test)
 
-    print(f'{depth}: trening - {trening_dokladnosc} ; test - {test_dokladnosc}')
+    print(f'{depth}: trening - {trening_dokladnosc:.4f} ; test - {test_dokladnosc:.4f}')
 
 # wypisz wyniki / narysuj wykres
 
