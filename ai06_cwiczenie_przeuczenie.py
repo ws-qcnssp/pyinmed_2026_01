@@ -1,11 +1,11 @@
 # 1. Wczytaj zbiór danych przez "load_breast_cancer" z biblioteki scikit-learn
-# 2. podziel zbiór na treningowy i testowy 75% - 25%, random_state=100
-# 3. Wytrenuj model KNN (KNeighborsClassifier) z n_neighbors=5 (poszukaj w dokumentacji scikit-learn / Google)
-# 4. Oceń dokładność modelu (accuracy)
+# 2. podziel zbiór na treningowy i testowy 60% - 40%, random_state=100
+# 3. Wytrenuj model DecisionTreeClassifier -> wytrenuj z różnymi wartościami max_depth od 1 do 10
+# 4. Określ optymalną głębokość drzewa w oparciu o score dla zbiorów treningowego i testowego
 # ------------------------------------------------------
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
-from sklearn.neighbors import KNeighborsClassifier
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
 
 dane = datasets.load_breast_cancer()
@@ -14,7 +14,7 @@ wyniki = dane.target
 
 # Podział na trening/test
 cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
-    cechy, wyniki, test_size=0.25, random_state=100
+    cechy, wyniki, test_size=0.4, random_state=100
 )
 
 model = KNeighborsClassifier(n_neighbors=5)
