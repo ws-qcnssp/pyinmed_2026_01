@@ -4,9 +4,10 @@
 # 4. Określ optymalną głębokość drzewa w oparciu o score dla zbiorów treningowego i testowego
 # ------------------------------------------------------
 from sklearn import datasets
-from sklearn.model_selection import train_test_split
+from sklearn.model_selection import train_test_split, GridSearchCV
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.metrics import accuracy_score
+import pandas as pd
 
 dane = datasets.load_breast_cancer()
 cechy = dane.data
@@ -14,34 +15,21 @@ wyniki = dane.target
 
 # Podział na trening/test
 cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
-    cechy, wyniki, test_size=0.4, random_state=100
+    cechy, wyniki, test_size=0.2, random_state=100
 )
 
-depths = []
-trening_dokladnosci = []
-test_dokladnosci = []
+model = DecisionTreeClassifier(random_state=100)
+# model.fit(cechy_trening, wyniki_trening)
 
-for depth in range(1,11):
-    model = DecisionTreeClassifier(max_depth=depth, random_state=100)
-    model.fit(cechy_trening, wyniki_trening)
+parametry = {'max_depth': [2,3,4,6,8], 'min_samples_leaf': [1,3,5]}
+walidator = GridSearchCV(model, parametry, cv=3)
+walidator.fit(cechy_trening, wyniki_trening)
+print(f'Najlepsze parametry: {walidator.best_params_}')
+print(f'Najlepsza dokładność: {walidator.best_score_}')
 
-    # dla każdego max_depth zapamiętaj depth i poniższe parametry
-    trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
-    test_dokladnosc = model.score(cechy_test, wyniki_test)
+wyniki_kros = pd.DataFrame(walidator.cv_results_)
+print(wyniki_kros.head())
 
-    depths.append(depth)
-    trening_dokladnosci.append(trening_dokladnosc)
-    test_dokladnosci.append(test_dokladnosc)
-
-    print(f'{depth}: trening - {trening_dokladnosc:.4f} ; test - {test_dokladnosc:.4f}')
-
-# wypisz wyniki / narysuj wykres
-
-import matplotlib.pyplot as plt
-plt.plot(depths, trening_dokladnosci, label = 'trening - dokladnosc')
-plt.plot(depths, test_dokladnosci, label = 'test - dokladnosc')
-plt.legend()
-plt.show()
 
 
 
