@@ -33,6 +33,8 @@ wyniki = df['Wynik']
 cechy_kodowane = pd.get_dummies(cechy, columns=['Plec', 'Palenie'], drop_first=True)
 print(cechy_kodowane.head())
 
+# 4. Standaryzacja kolumn numerycznych
+
 
 
 # model = tree.DecisionTreeClassifier()
