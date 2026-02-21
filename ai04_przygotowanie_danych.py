@@ -31,7 +31,7 @@ wyniki = df['Wynik']
 # pandas
 cechy_kodowane = pd.get_dummies(cechy, columns=['Plec', 'Palenie'], drop_first=False)
 
-print(cechy.head())
+print(cechy_kodowane.head())
 
 # model = tree.DecisionTreeClassifier()
 
