@@ -17,13 +17,15 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
     cechy, wyniki, test_size=0.4, random_state=100
 )
 
+for depth in range(1,11):
+    model = DecisionTreeClassifier(max_depth=depth, random_state=100)
+    model.fit(cechy_trening, wyniki_trening)
 
-model = DecisionTreeClassifier(max_depth=???, random_state=100)
-model.fit(cechy_trening, wyniki_trening)
+    # dla każdego max_depth zapamiętaj depth i poniższe parametry
+    trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
+    test_dokladnosc = model.score(cechy_test, wyniki_test)
 
-# dla każdego max_depth zapamiętaj depth i poniższe parametry
-trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
-test_dokladnosc = model.score(cechy_test, wyniki_test)
+    print(f'{depth}: trening - {trening_dokladnosc} ; test - {test_dokladnosc}')
 
 # wypisz wyniki / narysuj wykres
 
