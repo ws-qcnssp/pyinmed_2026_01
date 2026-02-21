@@ -3,10 +3,11 @@ import pandas as pd
 from sklearn.model_selection import train_test_split
 from sklearn import tree
 from sklearn.metrics import accuracy_score
+import numpy as np
 
 dane = {
-    'Wiek': [45, 62, 33, 70, 55, 48, 60, 39, 75, 29],
-    'CRP': [5.1, 12.5, 1.8, 15.0, 7.2, 4.5, 11.1, 2.0, 18.3, 1.5],
+    'Wiek': [45, 62, 33, 70, 55, np.nan, 60, 39, 75, 29],
+    'CRP': [5.1, 12.5, np.nan, 15.0, 7.2, 4.5, 11.1, 2.0, 18.3, 1.5],
     'Plec': ['K', 'M', 'K', 'M', 'K', 'M', 'K', 'K', 'M', 'M'],
     'Palenie': ['Tak', 'Nie', 'Nie', 'Tak', 'Nie', 'Tak', 'Nie', 'Nie', 'Tak', 'Nie'],
     'Wynik': [1, 1, 0, 1, 0, 1, 1, 0, 1, 0] # 1 = Podwyższone ryzyko, 0 = Niskie ryzyko
