@@ -39,7 +39,15 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
     cechy_kodowane, wyniki, test_size=0.4, random_state=42
 )
 
-# 5. Standaryzacja kolumn numerycznych
+# 5a. wprowadzenie brakujących danych
+from sklearn.impute import SimpleImputer
+imputer = SimpleImputer(strategy='mean')
+cechy_trening[['Wiek', 'CRP']] = imputer.fit_transform(cechy_trening[['Wiek', 'CRP']])
+cechy_test[['Wiek', 'CRP']] = imputer.transform(cechy_test[['Wiek', 'CRP']])
+
+print(imputer.statistics_)
+
+# 5b. Standaryzacja kolumn numerycznych
 from sklearn.preprocessing import MinMaxScaler
 scaler = MinMaxScaler()
 cechy_trening[['Wiek', 'CRP']] = scaler.fit_transform(cechy_trening[['Wiek', 'CRP']])
