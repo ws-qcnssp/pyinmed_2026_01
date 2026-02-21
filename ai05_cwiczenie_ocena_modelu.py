@@ -25,3 +25,7 @@ wyniki_przewidywane = model.predict(cechy_test)
 dokladnosc = accuracy_score(wyniki_test, wyniki_przewidywane)
 print(f'Dokładność (accuracy): {dokladnosc}')
 
+# from sklearn.metrics import confusion_matrix, classification_report
+# 1. Wygeneruj macierz pomyłek i wypisz ją
+# 2. Wygeneruj raport klasyfikacyjny i wypisz
+
