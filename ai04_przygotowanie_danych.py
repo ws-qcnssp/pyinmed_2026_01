@@ -33,7 +33,16 @@ wyniki = df['Wynik']
 cechy_kodowane = pd.get_dummies(cechy, columns=['Plec', 'Palenie'], drop_first=True)
 print(cechy_kodowane.head())
 
-# 4. Standaryzacja kolumn numerycznych
+# 4. Podział na dane treningowe i testowe
+cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
+    cechy_kodowane, wyniki, test_size=0.4, random_state=100
+)
+
+# 5. Standaryzacja kolumn numerycznych
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
+cechy_trening[['Wiek', 'CRP']] = scaler.fit_transform(cechy_trening[['Wiek', 'CRP']])
+cechy_test[['Wiek', 'CRP']] = scaler.transform(cechy_test[['Wiek', 'CRP']])
 
 
 
