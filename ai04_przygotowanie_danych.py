@@ -45,6 +45,7 @@ cechy_trening[['Wiek', 'CRP']] = scaler.fit_transform(cechy_trening[['Wiek', 'CR
 cechy_test[['Wiek', 'CRP']] = scaler.transform(cechy_test[['Wiek', 'CRP']])
 
 print(cechy_trening.head())
+print(f'Min: {scaler.data_min_}, Max: {scaler.data_max_}')
 
 # model = tree.DecisionTreeClassifier()
 
