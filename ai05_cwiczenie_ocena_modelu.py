@@ -28,5 +28,11 @@ print(f'Dokładność (accuracy): {dokladnosc}')
 from sklearn.metrics import confusion_matrix, classification_report
 # 1. Wygeneruj macierz pomyłek i wypisz ją
 # 2. Wygeneruj raport klasyfikacyjny i wypisz
-macierz_konf = confusion_matrix()
+macierz_konf = confusion_matrix(wyniki_test, wyniki_przewidywane)
+raport = classification_report(wyniki_test, wyniki_przewidywane, target_names=dane.target_names)
+print('Macierz pomyłek:')
+print(macierz_konf)
+print('Raport klasyfikacji:')
+print(raport)
+
 
