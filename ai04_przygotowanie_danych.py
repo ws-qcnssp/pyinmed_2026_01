@@ -58,4 +58,8 @@ print(f'Min: {scaler.data_min_}, Max: {scaler.data_max_}')
 
 # 6. trenowanie modelu
 model = tree.DecisionTreeClassifier()
+model.fit(cechy_trening, wyniki_trening)
+wyniki_pred = model.predict(cechy_test)
+accuracy = accuracy_score(wyniki_test, wyniki_pred)
+print(f'Accuracy: {accuracy}')
 
