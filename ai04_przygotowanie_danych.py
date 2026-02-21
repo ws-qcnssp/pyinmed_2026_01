@@ -56,6 +56,8 @@ cechy_test[['Wiek', 'CRP']] = scaler.transform(cechy_test[['Wiek', 'CRP']])
 print(cechy_trening.head())
 print(f'Min: {scaler.data_min_}, Max: {scaler.data_max_}')
 
-# model = tree.DecisionTreeClassifier()
 # test
+
+# 6. trenowanie modelu
+model = tree.DecisionTreeClassifier()
 
