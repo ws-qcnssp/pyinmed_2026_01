@@ -4,4 +4,4 @@ dane = fetch_openml(data_id=1506, as_frame=True, parser='auto')
 cechy = dane.data
 wyniki = dane.target
 
-cechy.head()
+print(cechy.head())
