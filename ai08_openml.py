@@ -7,4 +7,4 @@ wyniki = dane.target
 print(cechy.head())
 print(cechy.info())
 
-cechy_num = cechy.select_dtypes(include=['int64', ''])
+# cechy_num = cechy.select_dtypes(include=['int64', ''])
