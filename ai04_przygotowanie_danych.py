@@ -31,8 +31,9 @@ wyniki = df['Wynik']
 # cechy['Plec_M'] = cechy['Plec'] == 'M'
 # pandas
 cechy_kodowane = pd.get_dummies(cechy, columns=['Plec', 'Palenie'], drop_first=True)
-
 print(cechy_kodowane.head())
+
+
 
 # model = tree.DecisionTreeClassifier()
 
