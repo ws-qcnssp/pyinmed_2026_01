@@ -17,6 +17,10 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
     cechy, wyniki, test_size=0.4, random_state=100
 )
 
+depths = []
+trening_dokladnosci = []
+test_dokladnosci = []
+
 for depth in range(1,11):
     model = DecisionTreeClassifier(max_depth=depth, random_state=100)
     model.fit(cechy_trening, wyniki_trening)
@@ -25,9 +29,19 @@ for depth in range(1,11):
     trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
     test_dokladnosc = model.score(cechy_test, wyniki_test)
 
+    depths.append(depth)
+    trening_dokladnosci.append(trening_dokladnosc)
+    test_dokladnosci.append(test_dokladnosc)
+
     print(f'{depth}: trening - {trening_dokladnosc:.4f} ; test - {test_dokladnosc:.4f}')
 
 # wypisz wyniki / narysuj wykres
+
+import matplotlib.pyplot as plt
+plt.plot(depths, trening_dokladnosci, label = 'trening - dokladnosc')
+plt.plot(depths, test_dokladnosci, label = 'test - dokladnosc')
+plt.legend()
+plt.show()
 
 
 
