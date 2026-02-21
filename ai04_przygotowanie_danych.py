@@ -46,8 +46,6 @@ cechy_test[['Wiek', 'CRP']] = scaler.transform(cechy_test[['Wiek', 'CRP']])
 
 print(cechy_trening.head())
 
-
-
 # model = tree.DecisionTreeClassifier()
 
 # test
