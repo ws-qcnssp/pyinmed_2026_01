@@ -30,3 +30,5 @@ print(cechy.head())
 
 model = tree.DecisionTreeClassifier()
 
+# test
+
