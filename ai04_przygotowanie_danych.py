@@ -28,7 +28,7 @@ wyniki = df['Wynik']
 cechy['Plec_K'] = cechy['Plec'] == 'K'
 print(cechy.head())
 
-model = tree.DecisionTreeClassifier()
+# model = tree.DecisionTreeClassifier()
 
 # test
 
