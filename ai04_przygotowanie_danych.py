@@ -25,6 +25,7 @@ wyniki = df['Wynik']
 # )
 # model.fit(cechy_trening, wyniki_trening)
 
+# 3. One-Hot encoding
 # ręcznie
 # cechy['Plec_K'] = cechy['Plec'] == 'K'
 # cechy['Plec_M'] = cechy['Plec'] == 'M'
