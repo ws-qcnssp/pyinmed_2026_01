@@ -45,7 +45,7 @@ imputer = SimpleImputer(strategy='mean')
 cechy_trening[['Wiek', 'CRP']] = imputer.fit_transform(cechy_trening[['Wiek', 'CRP']])
 cechy_test[['Wiek', 'CRP']] = imputer.transform(cechy_test[['Wiek', 'CRP']])
 
-print(imputer.statistics_)
+print(f'średnie użyte do uzupełnienia braków: {imputer.statistics_}')
 
 # 5b. Standaryzacja kolumn numerycznych
 from sklearn.preprocessing import MinMaxScaler
@@ -55,8 +55,6 @@ cechy_test[['Wiek', 'CRP']] = scaler.transform(cechy_test[['Wiek', 'CRP']])
 
 print(cechy_trening.head())
 print(f'Min: {scaler.data_min_}, Max: {scaler.data_max_}')
-
-# test
 
 # 6. trenowanie modelu
 model = tree.DecisionTreeClassifier()
