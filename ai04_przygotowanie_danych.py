@@ -25,8 +25,12 @@ wyniki = df['Wynik']
 # )
 # model.fit(cechy_trening, wyniki_trening)
 
-cechy['Plec_K'] = cechy['Plec'] == 'K'
-cechy['Plec_M'] = cechy['Plec'] == 'M'
+# ręcznie
+# cechy['Plec_K'] = cechy['Plec'] == 'K'
+# cechy['Plec_M'] = cechy['Plec'] == 'M'
+# pandas
+cechy_kodowane = pd.get_dummies(cechy, columns=['Plec', 'Palenie'], drop_first=False)
+
 print(cechy.head())
 
 # model = tree.DecisionTreeClassifier()
