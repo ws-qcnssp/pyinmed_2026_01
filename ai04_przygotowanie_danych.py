@@ -57,6 +57,5 @@ print(cechy_trening.head())
 print(f'Min: {scaler.data_min_}, Max: {scaler.data_max_}')
 
 # model = tree.DecisionTreeClassifier()
-
 # test
 
