@@ -18,7 +18,7 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
 )
 
 
-model = DecisionTreeClassifier(max_depth=???)
+model = DecisionTreeClassifier(max_depth=???, random_state=100)
 model.fit(cechy_trening, wyniki_trening)
 
 trening_dokladnosc = model.score(cechy_trening, wyniki_trening)
