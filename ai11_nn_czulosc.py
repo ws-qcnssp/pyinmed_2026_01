@@ -3,6 +3,7 @@ from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import accuracy_score
 
+# Wczytanie danych z OpenML - badania KTG - i ocena noworodka
 dane = fetch_openml(data_id=1466, as_frame=True, parser='auto')
 cechy = dane.data # X
 wyniki = dane.target # y
