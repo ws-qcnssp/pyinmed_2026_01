@@ -15,7 +15,17 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
 )
 
 # model = MLPClassifier(hidden_layer_sizes=(50), random_state=100)
-model.fit(cechy_trening, wyniki_trening)
+model = Sequential([
+    # warstwa wejściowa
+    Dense(16, activation='relu', input_shape=(cechy_trening.shape[1])),
+    # warstwa ukryta
+    Dense(8, activation='relu'),
+    # warstwa wyjściowa
+    Dense(1, activation='sigmoid')
+])
+
+model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
+model.fit(cechy_trening, wyniki_trening, batch_size=10, epochs=50)
 
 wyniki_przewidywane = model.predict(cechy_test)
 
