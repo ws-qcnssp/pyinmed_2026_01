@@ -27,7 +27,7 @@ model = Sequential([
 model.compile(optimizer='adam', loss='binary_crossentropy', metrics=['accuracy'])
 model.fit(cechy_trening, wyniki_trening, batch_size=10, epochs=50)
 
-wyniki_przewidywane = model.predict(cechy_test)
+wyniki_przewidywane = (model.predict(cechy_test) >0.5).astype('int32')
 
 dokladnosc = accuracy_score(wyniki_test, wyniki_przewidywane)
 print(f'Dokładność (accuracy): {dokladnosc}')
