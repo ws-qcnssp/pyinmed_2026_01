@@ -17,7 +17,7 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
 # model = MLPClassifier(hidden_layer_sizes=(50), random_state=100)
 model = Sequential([
     # warstwa wejściowa
-    Dense(16, activation='relu', input_shape=(cechy_trening.shape[1])),
+    Dense(30, activation='relu', input_shape=(cechy_trening.shape[1])),
     # warstwa ukryta
     Dense(8, activation='relu'),
     # warstwa wyjściowa
