@@ -15,3 +15,10 @@ wyniki = df['Wynik']
 
 from sklearn.model_selection import RepeatedStratifiedKFold
 
+kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
+
+for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
+    print('następna iteracja')
+    print(indeksy_trening)
+    print(indeksy_test)
+
