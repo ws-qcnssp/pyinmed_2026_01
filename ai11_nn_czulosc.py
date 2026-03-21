@@ -9,12 +9,12 @@ dane = fetch_openml(data_id=1466, as_frame=True, parser='auto')
 cechy = dane.data # X
 wyniki = dane.target # y
 
-print('Cechy:')
-print(cechy.describe())
-print(cechy.head())
+# print('Cechy:')
+# print(cechy.describe())
+# print(cechy.head())
 
-print('Wyniki:')
-print(wyniki.head())
+# print('Wyniki:')
+# print(wyniki.head())
 
 # kroswalidacja warstwowa
 kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
