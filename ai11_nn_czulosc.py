@@ -24,7 +24,7 @@ for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
     wyniki_trening, wyniki_test = wyniki.iloc[indeksy_trening], wyniki.iloc[indeksy_test]
 
     # definicja modelu, uczenie i predykcja
-    model = MLPClassifier(random_state=100, hidden_layer_sizes=(50,30,20), max_iter=2000)
+    model = MLPClassifier(random_state=100, hidden_layer_sizes=(20), max_iter=2000)
     # model = RandomForestClassifier(random_state=100)
     model.fit(cechy_trening, wyniki_trening)
     wyniki_pred = model.predict(cechy_test)
