@@ -6,6 +6,7 @@ from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score
 import pandas as pd
 from sklearn.pipeline import Pipeline
+from sklearn.model_selection import GridSearchCV
 
 # Wczytanie danych z OpenML - badania ILPD
 dane = fetch_openml(data_id=1480, as_frame=True, parser='auto')
@@ -34,4 +35,7 @@ hiperparametry = {
     'mlp__activation': ['relu', 'tanh'],
     'mlp__solver': ['adam', 'sgd']
 }
+
+print('Grid search dla sieci MLP')
+grid = GridSearchCV(pipeline, hiperparametry, cv=3, n_jobs=-1)
 
