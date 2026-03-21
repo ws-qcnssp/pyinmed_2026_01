@@ -34,3 +34,4 @@ hiperparametry = {
     'mlp__activation': ['relu', 'tanh'],
     'mlp__solver': ['adam', 'sgd']
 }
+
