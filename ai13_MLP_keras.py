@@ -11,7 +11,7 @@ wyniki = dane.target
 
 # Podział na trening/test
 cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
-    cechy, wyniki, test_size=0.25, random_state=100
+    cechy, wyniki, test_size=0.2, random_state=100
 )
 
 # model = MLPClassifier(hidden_layer_sizes=(50), random_state=100)
