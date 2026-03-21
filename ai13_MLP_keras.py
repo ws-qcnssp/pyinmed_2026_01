@@ -1,7 +1,8 @@
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 # from sklearn.neural_network import MLPClassifier
-from keras.models import 
+from keras.models import Sequential
+from keras.layers import Dense, Dropout
 from sklearn.metrics import accuracy_score
 
 dane = datasets.load_breast_cancer()
