@@ -22,4 +22,7 @@ print(wyniki.head())
 cechy = pd.get_dummies(cechy, columns=['V2'], drop_first=True)
 print(cechy.head())
 
-pipeline = Pipeline
+pipeline = Pipeline([
+    ('scaler', MinMaxScaler()),
+    ('mlp', MLPClassifier(hidden_layer_sizes=(50), random_state=100, max_iter=5000))
+])
