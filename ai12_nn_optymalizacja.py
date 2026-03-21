@@ -24,5 +24,13 @@ print(cechy.head())
 
 pipeline = Pipeline([
     ('scaler', MinMaxScaler()),
-    ('mlp', MLPClassifier(hidden_layer_sizes=(50), random_state=100, max_iter=5000))
+    ('mlp', MLPClassifier(random_state=100, max_iter=5000))
 ])
+
+# parametry = {'max_depth': [2,3,4,6,8], 'min_samples_leaf': [1,3,5]}
+# walidator = GridSearchCV(model, parametry, cv=3)
+hiperparametry = {
+    'mlp__hidden_layer_sizes': [(100), (50), (50, 25), (30, 20, 10)],
+    'mlp__activation': ['relu', 'tanh'],
+    'mlp__solver': ['adam', 'sgd']
+}
