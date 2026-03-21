@@ -1,9 +1,7 @@
 from sklearn.datasets import fetch_openml
 from sklearn.neural_network import MLPClassifier
 # from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.preprocessing import MinMaxScaler
-from sklearn.metrics import accuracy_score
 import pandas as pd
 from sklearn.pipeline import Pipeline
 from sklearn.model_selection import GridSearchCV
