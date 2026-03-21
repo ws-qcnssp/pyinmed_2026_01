@@ -1,6 +1,6 @@
 from sklearn.datasets import fetch_openml
-# from sklearn.neural_network import MLPClassifier
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.neural_network import MLPClassifier
+# from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
 from sklearn.metrics import accuracy_score
 
@@ -24,8 +24,8 @@ for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
     wyniki_trening, wyniki_test = wyniki.iloc[indeksy_trening], wyniki.iloc[indeksy_test]
 
     # definicja modelu, uczenie i predykcja
-    # model = MLPClassifier(random_state=100, hidden_layer_sizes=(50,), max_iter=2000)
-    model = RandomForestClassifier(random_state=100)
+    model = MLPClassifier(random_state=100, hidden_layer_sizes=(50,30,20), max_iter=2000)
+    # model = RandomForestClassifier(random_state=100)
     model.fit(cechy_trening, wyniki_trening)
     wyniki_pred = model.predict(cechy_test)
     dokladnosc = accuracy_score(wyniki_test, wyniki_pred)
