@@ -18,10 +18,13 @@ kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
 
 for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
     cechy_trening, cechy_test = cechy.iloc[indeksy_trening,:], cechy.iloc[indeksy_test,:]
-    wyniki_trening, wyniki_ytest = wyniki.iloc[indeksy_trening], wyniki.iloc[indeksy_test]
+    wyniki_trening, wyniki_test = wyniki.iloc[indeksy_trening], wyniki.iloc[indeksy_test]
 
     model = MLPClassifier(random_state=100, hidden_layer_sizes=(50,), max_iter=2000)
+    model.fit(cechy_trening, wyniki_trening)
+    wyniki_pred = model.predict(cechy_test)
+    dokladnosc = accuracy_score(wyniki_test, wyniki_pred)
+    print(dokladnosc)
 
-    
 
 
