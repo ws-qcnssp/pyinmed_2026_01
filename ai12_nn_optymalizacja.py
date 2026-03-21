@@ -43,7 +43,6 @@ wyniki_df = pd.DataFrame(grid.cv_results_)
 wyniki_df = wyniki_df.sort_values(by='mean_test_score', ascending=False)
 # print(wyniki_df['param_mlp__hidden_layer_sizes', 'param_mlp__activation', 'param_mlp__solver', 'mean_test_score'].head())
 print(wyniki_df.head())
-
 print(wyniki_df.columns)
 
 
