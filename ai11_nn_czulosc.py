@@ -14,4 +14,7 @@ print(cechy.head())
 print('Wyniki:')
 print(wyniki.head())
 
+kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
 
+for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
+    cechy_trening, cechy_test = cechy.iloc[indeksy_trening,:], cechy.iloc[indeksy_test,:]
