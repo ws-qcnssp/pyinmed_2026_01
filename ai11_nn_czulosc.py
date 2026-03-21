@@ -29,7 +29,7 @@ for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
     cechy_trening = scaler.fit_transform(cechy_trening)
     cechy_test = scaler.transform(cechy_test)
     # definicja modelu, uczenie i predykcja
-    model = MLPClassifier(random_state=100, hidden_layer_sizes=(20), max_iter=2000)
+    model = MLPClassifier(random_state=100, hidden_layer_sizes=(50), max_iter=2000)
     # model = RandomForestClassifier(random_state=100)
     model.fit(cechy_trening, wyniki_trening)
     wyniki_pred = model.predict(cechy_test)
