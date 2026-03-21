@@ -43,6 +43,7 @@ grid.fit(cechy, wyniki)
 print('Najlepszy wynik:')
 print(f'parametry: {grid.best_params_}, dokładność: {grid.best_score_}')
 
+print('Najlepsze wyniki całego grid search:')
 wyniki_df = pd.DataFrame(grid.cv_results_)
 wyniki_df = wyniki_df.sort_values(by='mean_test_score', ascending=False)
 print(wyniki_df.head())
