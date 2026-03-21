@@ -14,7 +14,7 @@ cechy_trening, cechy_test, wyniki_trening, wyniki_test = train_test_split(
     cechy, wyniki, test_size=0.25, random_state=100
 )
 
-model = MLPClassifier(hidden_layer_sizes=(50), random_state=100)
+# model = MLPClassifier(hidden_layer_sizes=(50), random_state=100)
 model.fit(cechy_trening, wyniki_trening)
 
 wyniki_przewidywane = model.predict(cechy_test)
