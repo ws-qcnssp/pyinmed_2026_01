@@ -12,3 +12,6 @@ df = pd.DataFrame(dane)
 
 cechy = df[['Wiek', 'CRP', 'Plec', 'Palenie']]
 wyniki = df['Wynik']
+
+from sklearn.model_selection import RepeatedStratifiedKFold
+
