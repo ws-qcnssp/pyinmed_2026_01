@@ -15,6 +15,9 @@ wyniki = dane.target # y
 
 # print('Wyniki:')
 # print(wyniki.head())
+# standaryzacja - szczególnie ważna dla NN
+from sklearn.preprocessing import MinMaxScaler
+scaler = MinMaxScaler()
 
 # kroswalidacja warstwowa
 kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
@@ -22,6 +25,7 @@ kfold = RepeatedStratifiedKFold(n_splits=3, n_repeats=2, random_state=100)
 for indeksy_trening, indeksy_test in kfold.split(cechy, wyniki):
     cechy_trening, cechy_test = cechy.iloc[indeksy_trening,:], cechy.iloc[indeksy_test,:]
     wyniki_trening, wyniki_test = wyniki.iloc[indeksy_trening], wyniki.iloc[indeksy_test]
+
 
     # definicja modelu, uczenie i predykcja
     model = MLPClassifier(random_state=100, hidden_layer_sizes=(20), max_iter=2000)
