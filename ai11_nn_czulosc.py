@@ -1,6 +1,7 @@
 from sklearn.datasets import fetch_openml
 from sklearn.neural_network import MLPClassifier
 from sklearn.model_selection import RepeatedStratifiedKFold
+from sklearn.metrics import accuracy_score
 
 dane = fetch_openml(data_id=1466, as_frame=True, parser='auto')
 cechy = dane.data # X
@@ -12,4 +13,5 @@ print(cechy.head())
 
 print('Wyniki:')
 print(wyniki.head())
+
 
